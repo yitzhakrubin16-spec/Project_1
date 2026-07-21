@@ -185,3 +185,8 @@ curl localhost:3000/leaderboard/tetris
 ```
 https://github.com/yitzhakrubin16-spec/Project_1.git
 ```
+
+## קישור לRender
+```
+https://project-1-cs60.onrender.com
+```
