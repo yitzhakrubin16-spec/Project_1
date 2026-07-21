@@ -1,20 +1,23 @@
 import express from "express";
-import { MongoClient, ObjectId } from "mongodb";
+import mongoose from "mongoose";
 import "dotenv/config";
 
 const app = express();
 
 app.use(express.json());
 
-const client = new MongoClient(process.env.MONGO_URI);
+
+const PORT = process.env.PORT || 3000;
 
 try{
-    await client.connect();
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("Atlas connected!");
+
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
 }catch(e){
     console.log("failed connect to mondo db", e);
     process.exit(1);
 }
 
-const db = await client.db("Score_Tracker");
-const connection = db.collection("Atlas_dashboard");
