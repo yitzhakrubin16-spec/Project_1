@@ -177,3 +177,11 @@ curl localhost:3000/leaderboard/tetris
 - **GET `/player/:name/rank/:game`** — מה הדירוג של השחקן במשחק ספציפי? (מקום 1, 2, 3...)
 - **GET `/leaderboard/daily`** — לוח תוצאות של היום בלבד (השתמשו ב-`$gte` על `createdAt`)
 - **DELETE `/scores/:id`** — מחיקת תוצאה עם בדיקה שה-id קיים
+
+
+
+
+## קישור לפרוייקט בgit
+```
+https://github.com/yitzhakrubin16-spec/Project_1.git
+```
