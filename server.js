@@ -1,11 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
+import scoresRouter from "./routes/scores.js";
 
 const app = express();
 
 app.use(express.json());
 
+app.use("/scores", scoresRouter);
 
 const PORT = process.env.PORT || 3000;
 
